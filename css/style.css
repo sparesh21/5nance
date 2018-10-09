@@ -111,12 +111,12 @@ table {
 
 .flexible-art .item.t1 {
 	z-index: 2;
-	right: 900px;
-	bottom: 300px;
+	bottom: 43%;
+    left: 26%;
 }
 
 .flexible-art .item.t2 {
 	z-index: 2;
-	right: 0;
-	bottom: 0;
+	bottom: -40px;
+    left: 80%;
 }

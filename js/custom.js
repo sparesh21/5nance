@@ -34,21 +34,21 @@ $(document).ready(function () {
 		$('.flexible-art .item').eq(swiperIndex).next().addClass('index-next');
 		$('.flexible-art .item').eq(swiperIndex).addClass('active');
 		TweenMax.to('.item.index-prev', 1, {
-			right: '900px',
-			bottom: '800px',
+			left: '3.5%',
+			bottom: '90vh',
 			rotation: swiperIndex * 200,
 			zIndex: 2
 		});
 		TweenMax.to('.item.active', 1, {
-			right: '900px',
-			bottom: '300px',
-			rotation: swiperIndex * 200,
+			left: '26%',
+			bottom: '43%',
+			rotation: swiperIndex * 360,
 			zIndex: 2
 		});
 		TweenMax.to('.item.index-next', 1, {
-			right: '0',
-			bottom: '0',
-			rotation: swiperIndex * 200,
+			left: '80%',
+			bottom: '-40px',
+			rotation: swiperIndex * 360,
 			zIndex: 2
 		});
 	});
