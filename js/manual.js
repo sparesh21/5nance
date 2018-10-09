@@ -1,30 +1,13 @@
 $(document).ready(function() {
-	var slider = $('.slider-for')
-		.slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: true,
-			speed: 1000,
-			vertical: true,
-			infinite: false,
-		});
-
-
-	// On swipe event
-	$('.your-element').on('swipe', function(event, slick, direction) {
-		console.log(direction);
-		// left
+	$('.frame1 .next').on('click', function() {
+		$('.frame1').slideUp();
+		$('.frame2').slideDown();
+		console.log('fasd');
 	});
-
-	// On edge hit
-	$('.your-element').on('edge', function(event, slick, direction) {
-		console.log('edge was hit')
-	});
-
-	// On before slide change
-
-	slider.on('afterChange', function(nextSlide) {
-		console.log(nextSlide);
+	$('.frame2 .prev').on('click', function() {
+		$('.frame1').slideDown();
+		$('.frame2').slideUp();
+		console.log('fasd');
 	});
 
 });

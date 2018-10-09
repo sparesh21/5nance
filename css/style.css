@@ -147,3 +147,16 @@ table {
 	color: #fff;
 	background: #000;
 }
+
+.frame {
+	position: absolute;
+	width: 40%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	display: none;
+}
+
+.frame1 {
+	display: block;
+}
