@@ -3,7 +3,7 @@ $(document).ready(function() {
     var swiperIndex
     var swiper = new Swiper('.swiper-container', {
         direction: 'vertical',
-        speed: 2000,
+        speed: 1000,
         fadeEffect: {
             crossFade: true
         },
@@ -64,13 +64,13 @@ $(document).ready(function() {
         TweenMax.to('.item.active', 1, {
             left: '26%',
             bottom: '43%',
-            rotation: swiperIndex * 360
+            rotation: swiperIndex * 180
              
         });
         TweenMax.to('.item.index-next', 1, {
             left: '80%',
             bottom: '-40px',
-            rotation: swiperIndex * 360
+            rotation: swiperIndex * 180
         });
     });
 
