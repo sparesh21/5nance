@@ -59,8 +59,7 @@ $(document).ready(function() {
         TweenMax.to('.item.index-prev', 1, {
             left: '3.5%',
             bottom: '90vh',
-            rotation: swiperIndex * 200,
-            zIndex: 2
+            rotation: swiperIndex * 200
         });
         TweenMax.to('.item.active', 1, {
             left: '26%',
@@ -71,8 +70,7 @@ $(document).ready(function() {
         TweenMax.to('.item.index-next', 1, {
             left: '80%',
             bottom: '-40px',
-            rotation: swiperIndex * 360,
-             zIndex: 2
+            rotation: swiperIndex * 360
         });
     });
 

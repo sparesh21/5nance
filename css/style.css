@@ -173,7 +173,7 @@ table {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: transparent;
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -213,13 +213,11 @@ table {
 }
 
 .flexible-art .item.t1 {
-    z-index: 2;
     bottom: 43%;
     left: 26%;
 }
 
 .flexible-art .item.t2 {
-    z-index: 2;
     bottom: -40px;
     left: 80%;
 }
