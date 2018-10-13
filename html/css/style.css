@@ -1,5 +1,4 @@
 /*fonts css*/
-
 @font-face {
     font-family: 'sanchezregular';
     src: url('fonts/sanchez/sanchez-regular-webfont.woff2') format('woff2'), url('fonts/sanchez/sanchez-regular-webfont.woff') format('woff');
@@ -21,90 +20,8 @@
     font-style: normal;
 }
 
-
 /*fonts css end*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -113,20 +30,8 @@ video {
     vertical-align: baseline;
 }
 
-
 /* HTML5 display-role reset for older browsers */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
@@ -136,20 +41,15 @@ body {
     overflow: hidden;
 }
 
-ol,
-ul {
+ol, ul {
     list-style: none;
 }
 
-blockquote,
-q {
+blockquote, q {
     quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after, q:before, q:after {
     content: '';
     content: none;
 }
@@ -159,22 +59,230 @@ table {
     border-spacing: 0;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
     box-sizing: border-box;
 }
 
-.swiper-container {
+/*loader*/
+.loader_overlay {
+    position: fixed;
+    z-index: 999;
+    background: #ffffff;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+}
+
+.cssload-container *, .cssload-container *:before, .cssload-container *:after {
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.cssload-container {
+    margin: -45px auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: 97px;
+    height: 97px;
+}
+
+.cssload-container > div {
+    float: left;
+    background: #000;
+    height: 100%;
+    width: 5px;
+    margin-right: 1px;
+    display: inline-block;
+}
+
+.cssload-container {
+    position: relative;
+    width: 97px;
+    height: 97px;
+}
+
+.cssload-container > div {
+    background: transparent;
+    border: 8px solid transparent;
+    border-color: #fddb77 transparent;
+    border-radius: 100%;
+    -o-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate"("-50%, -50%")";
+    -o-transform: translate"("-50%, -50%")";
+    -ms-transform: translate"("-50%, -50%")";
+    -webkit-transform: translate"("-50%, -50%")";
+    -moz-transform: translate"("-50%, -50%")";
+    transform: translate(-50%, -50%) rotate(0);
+    -o-transform: translate(-50%, -50%) rotate(0);
+    -ms-transform: translate(-50%, -50%) rotate(0);
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    -moz-transform: translate(-50%, -50%) rotate(0);
+    animation: cssload-wave 2.3s infinite ease-in-out;
+    -o-animation: cssload-wave 2.3s infinite ease-in-out;
+    -ms-animation: cssload-wave 2.3s infinite ease-in-out;
+    -webkit-animation: cssload-wave 2.3s infinite ease-in-out;
+    -moz-animation: cssload-wave 2.3s infinite ease-in-out;
+}
+
+.cssload-container .cssload-shaft1 {
+    animation-delay: 0.12s;
+    -o-animation-delay: 0.12s;
+    -ms-animation-delay: 0.12s;
+    -webkit-animation-delay: 0.12s;
+    -moz-animation-delay: 0.12s;
+    width: 19px;
+    height: 19px;
+}
+
+.cssload-container .cssload-shaft2 {
+    animation-delay: 0.23s;
+    -o-animation-delay: 0.23s;
+    -ms-animation-delay: 0.23s;
+    -webkit-animation-delay: 0.23s;
+    -moz-animation-delay: 0.23s;
+    width: 24px;
+    height: 24px;
+}
+
+.cssload-container .cssload-shaft3 {
+    animation-delay: 0.35s;
+    -o-animation-delay: 0.35s;
+    -ms-animation-delay: 0.35s;
+    -webkit-animation-delay: 0.35s;
+    -moz-animation-delay: 0.35s;
+    width: 34px;
+    height: 34px;
+}
+
+.cssload-container .cssload-shaft4 {
+    animation-delay: 0.46s;
+    -o-animation-delay: 0.46s;
+    -ms-animation-delay: 0.46s;
+    -webkit-animation-delay: 0.46s;
+    -moz-animation-delay: 0.46s;
+    width: 44px;
+    height: 44px;
+}
+
+.cssload-container .cssload-shaft5 {
+    animation-delay: 0.58s;
+    -o-animation-delay: 0.58s;
+    -ms-animation-delay: 0.58s;
+    -webkit-animation-delay: 0.58s;
+    -moz-animation-delay: 0.58s;
+    width: 54px;
+    height: 54px;
+}
+
+.cssload-container .cssload-shaft6 {
+    animation-delay: 0.69s;
+    -o-animation-delay: 0.69s;
+    -ms-animation-delay: 0.69s;
+    -webkit-animation-delay: 0.69s;
+    -moz-animation-delay: 0.69s;
+    width: 63px;
+    height: 63px;
+}
+
+.cssload-container .cssload-shaft7 {
+    animation-delay: 0.81s;
+    -o-animation-delay: 0.81s;
+    -ms-animation-delay: 0.81s;
+    -webkit-animation-delay: 0.81s;
+    -moz-animation-delay: 0.81s;
+    width: 73px;
+    height: 73px;
+}
+
+.cssload-container .cssload-shaft8 {
+    animation-delay: 0.92s;
+    -o-animation-delay: 0.92s;
+    -ms-animation-delay: 0.92s;
+    -webkit-animation-delay: 0.92s;
+    -moz-animation-delay: 0.92s;
+    width: 78px;
+    height: 78px;
+}
+
+.cssload-container .cssload-shaft9 {
+    animation-delay: 1.04s;
+    -o-animation-delay: 1.04s;
+    -ms-animation-delay: 1.04s;
+    -webkit-animation-delay: 1.04s;
+    -moz-animation-delay: 1.04s;
+    width: 83px;
+    height: 83px;
+}
+
+.cssload-container .cssload-shaft10 {
+    animation-delay: 1.15s;
+    -o-animation-delay: 1.15s;
+    -ms-animation-delay: 1.15s;
+    -webkit-animation-delay: 1.15s;
+    -moz-animation-delay: 1.15s;
+    width: 88px;
+    height: 88px;
+}
+
+@keyframes cssload-wave {
+    50% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        border-color: rgb(86, 215, 198) transparent;
+    }
+
+}
+
+@-o-keyframes cssload-wave {
+    50% {
+        -o-transform: translate(-50%, -50%) rotate(360deg);
+        border-color: rgb(86, 215, 198) transparent;
+    }
+
+}
+
+@-ms-keyframes cssload-wave {
+    50% {
+        -ms-transform: translate(-50%, -50%) rotate(360deg);
+        border-color: rgb(86, 215, 198) transparent;
+    }
+
+}
+
+@-webkit-keyframes cssload-wave {
+    50% {
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+        border-color: rgb(86, 215, 198) transparent;
+    }
+
+}
+
+@-moz-keyframes cssload-wave {
+    50% {
+        -moz-transform: translate(-50%, -50%) rotate(360deg);
+        border-color: rgb(86, 215, 198) transparent;
+    }
+
+}
+
+.swiper-container {
+    width: 360px;
+    height: 56vh;
 }
 
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: transparent;
-    /* Center slide text vertically */
+    background: transparent;    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -201,6 +309,8 @@ table {
     display: flex;
     align-items: center;
     height: 100vh;
+    opacity: 0;
+    transform: scale(0);
 }
 
 .flexible-art .item {
@@ -208,13 +318,53 @@ table {
     position: absolute;
 }
 
+.flexible-art .item small {
+    font-size: 24px;
+    font-family: 'sanchezregular';
+    opacity: 0;
+    transition: .9s all ease;
+}
+
+.flexible-art .item.active small {
+    opacity: 1;
+    transition: .9s all ease;
+}
+
+.flexible-art .item small.orange-text {
+    color: #fddb77;
+    margin-left: -240px;
+    margin-top: -59px;
+    z-index: 9999;
+    transform: rotate(-90deg);
+    display: inline-block;
+    height: 0px;
+    width: 42px;
+}
+
+.flexible-art .item small.green-text {
+    color: #b6e480;
+    display: inline-block;
+    transform: rotate(90deg);
+    margin-left: 18%;
+    height: 0px;
+    width: 366px;
+}
+
+.flexible-art .item small.blue-text {
+    color: #5ebbf3;
+    transform: rotate(-90deg);
+    display: inline-block;
+    width: 0px;
+    height: 25px;
+    margin-left: -84%;
+}
+
 /* .flexible-art .item img {
     width: 100%;
 } */
-
 .flexible-art .item.t1 {
     bottom: 43%;
-    left: 26%;
+    left: 22%;
 }
 
 .flexible-art .item.t2 {
@@ -227,7 +377,6 @@ table {
     right: 900px;
     bottom: 250px;
 } */
-
 .slider-for .items {
     height: 100px;
     width: 100px;
@@ -244,16 +393,6 @@ table {
     margin: 0 auto;
 }
 
-.slick-prev,
-.slick-next,
-.slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus {
-    color: #fff;
-    background: #000;
-}
-
 .frame {
     position: absolute;
     width: 40%;
@@ -267,37 +406,119 @@ table {
     display: block;
 }
 
-.index-prev,
-.index-next {
-	filter: blur(5px);
+.index-prev, .index-next {
+    filter: blur(5px);
 }
 
 .slide-info {
-	max-width: 305px;
-	width: 100%;
-	margin: 0 auto;
-	text-align: left;
+    max-width: 305px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
 }
+
 .slide-info.orange h2 {
-	color: #fddb77;
+    color: #fddb77;
 }
+
 .slide-info.green h2 {
-	color: #b6e480;
+    color: #b6e480;
 }
+
 .slide-info.blue h2 {
-	color: #5ebbf3;
+    color: #5ebbf3;
 }
+
 .slide-info h2 {
-	font-size: 92px;
-	font-family: 'sanchezregular';
-	margin-bottom: 35px;
+    font-size: 92px;
+    font-family: 'sanchezregular';
+    margin-bottom: 30px;
+    line-height: 0.8;
 }
+
+.slide-info h2 span {
+    font-size: 30px;
+}
+
 .slide-info h3 {
-	font-size: 36px;
-	font-family: 'SegoeUI';
-	margin-bottom: 10px;
+    font-size: 36px;
+    font-family: 'SegoeUI';
+    margin-bottom: 10px;
+    color: #333333;
 }
+
 .slide-info p {
-	font-size: 14px;
-	font-family: 'Candara';
+    font-size: 14px;
+    font-family: 'Candara';
+    color: #666666;
+    line-height: 1.4;
+}
+
+.indicator-buttons {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    z-index: 2;
+    padding-left: 26px;
+    margin-top: 50px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    top: auto;
+    position: relative;
+    margin: 0;
+    right: auto;
+    left: auto;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #474747;
+    border-radius: 50%;
+}
+
+.swiper-button-next {
+    background: url(../images/arrow-right.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 12px;
+    transition: 0.4s all ease;
+}
+
+.swiper-button-prev {
+    background: url(../images/arrow-left.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 0;
+    transition: 0.4s all ease;
+}
+
+.swiper-button-next:hover {
+    right: -12px;
+    transition: 0.4s all ease;
+}
+
+.swiper-button-prev:hover {
+    right: 24px;
+    transition: 0.4s all ease;
+}
+
+.side-moving .side-items {
+    width: 60px;
+    filter: blur(5px);
+    position: absolute;
+}
+
+.side-moving .sm-orange {
+    bottom: 2%;
+    left: 10%;
+}
+
+.side-moving .sm-green {
+    top: 2%;
+    right: 10%;
+}
+
+.side-moving .sm-blue {
+    top: 40%;
+    right: 25%;
 }
