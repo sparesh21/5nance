@@ -1,9 +1,4 @@
 $(document).ready(function() {
-
-    /*after loader js*/
-
-
-
     /*-- Initialize Swiper --*/
     var swiperIndex
     var swiper = new Swiper('.swiper-container', {
@@ -19,7 +14,7 @@ $(document).ready(function() {
         },
         on: {
             init: function() {
-                console.log('swiper initialized');
+
             }
         },
         click: function(sw, e) {
@@ -30,11 +25,7 @@ $(document).ready(function() {
     });
 
     swiper.on('slideChange', function() {
-        // console.log('slide changed');
         swiperIndex = swiper.activeIndex;
-        // console.log(swiperIndex);
-
-
         // hide prev/next all element
         if ((swiperIndex + 2) < $('.swiper-slide').length) {
             $('.flexible-art .item').eq(swiperIndex).next().next('.index-next').fadeOut();
@@ -85,11 +76,44 @@ $(document).ready(function() {
         });
     });
 
+    /*screen pdf*/
+    var d_canvas = document.getElementById('canvas');
+
+    function randomString() {
+        var text = "";
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        for (var i = 0; i < 5; i++)
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+        return text;
+    }
+
+    console.log(randomString());
+
+    $('#download').click(function() {
+        var w = $(window).width();
+        var h = $(window).height();
+
+        console.log('click')
+        html2canvas($("body"), {
+            dpi: 300, // Set to 300 DPI
+            scale: 1, // Adjusts your resolution
+            onrendered: function(canvas) {
+
+                //$(".output").append(canvas);
+                var img = canvas.toDataURL("image/jpeg", 1);
+                var doc = new jsPDF('L', 'px', [w, h]);
+                doc.addImage(img, 'JPEG', 0, 0, w, h);
+                doc.save(randomString() + '.pdf');
+            }
+        });
+    });
+
 
 });
 
 function firstLoad() {
-    console.log('call');
     TweenMax.to('.slider-cont', 1, {
         opacity: 1,
         scale: 1,
@@ -115,7 +139,6 @@ function firstLoad() {
 }
 $(window).on('load', function() {
     setTimeout(() => {
-        //$('.loader_overlay').hide(2000);
         TweenMax.to('.loader_overlay', 1, {
             opacity: 0,
             scale: 0,
